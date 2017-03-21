@@ -13,7 +13,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSImage *image = [NSImage imageNamed:@"8"];
+    NSImage *image = [NSImage imageNamed:@"9"];
     
     LeptonicaPix *pix = [[LeptonicaPix alloc] initWithNSImage:image];
     Tesseract *t = [[Tesseract alloc] initWithLanguage:@"chi_sim"];
@@ -22,6 +22,7 @@
     NSLog(@"%@", ret);
 
 }
+
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 
