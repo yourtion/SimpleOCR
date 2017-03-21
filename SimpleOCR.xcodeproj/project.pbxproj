@@ -14,6 +14,7 @@
 		CBC922811E7FEA7400A18637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC9227F1E7FEA7400A18637 /* Main.storyboard */; };
 		CBC922AA1E7FEB5900A18637 /* libtesseract.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC922A91E7FEB5900A18637 /* libtesseract.3.dylib */; };
 		CBC922B11E80CDF500A18637 /* liblept.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC922B01E80CDF500A18637 /* liblept.5.dylib */; };
+		CBC922F81E81072A00A18637 /* Tesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = CBC922F61E81072A00A18637 /* Tesseract.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		CBC922F11E80CE4F00A18637 /* stringcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringcode.h; sourceTree = "<group>"; };
 		CBC922F21E80CE4F00A18637 /* sudoku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sudoku.h; sourceTree = "<group>"; };
 		CBC922F31E80CE4F00A18637 /* watershed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = watershed.h; sourceTree = "<group>"; };
+		CBC922F61E81072A00A18637 /* Tesseract.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tesseract.mm; sourceTree = "<group>"; };
+		CBC922F71E81072A00A18637 /* Tesseract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tesseract.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 		CBC922731E7FEA7400A18637 /* SimpleOCR */ = {
 			isa = PBXGroup;
 			children = (
+				CBC922F61E81072A00A18637 /* Tesseract.mm */,
+				CBC922F71E81072A00A18637 /* Tesseract.h */,
 				CBC922741E7FEA7400A18637 /* AppDelegate.h */,
 				CBC922751E7FEA7400A18637 /* AppDelegate.m */,
 				CBC9227A1E7FEA7400A18637 /* ViewController.h */,
@@ -310,6 +315,7 @@
 				CBC9227C1E7FEA7400A18637 /* ViewController.m in Sources */,
 				CBC922791E7FEA7400A18637 /* main.m in Sources */,
 				CBC922761E7FEA7400A18637 /* AppDelegate.m in Sources */,
+				CBC922F81E81072A00A18637 /* Tesseract.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
