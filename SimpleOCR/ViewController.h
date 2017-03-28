@@ -11,5 +11,6 @@
 @interface ViewController : NSViewController
 @property (unsafe_unretained) IBOutlet NSTextView *textV;
 @property (weak) IBOutlet NSImageView *imageV;
+@property (weak) IBOutlet NSTextField *infoL;
 @end
 

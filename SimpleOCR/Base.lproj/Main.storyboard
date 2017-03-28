@@ -686,6 +686,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="800" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ik-My-ffE">
+                                <rect key="frame" x="20" y="100" width="360" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Sow-3a-ZY6"/>
+                            </imageView>
                             <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP7-LM-DFu">
                                 <rect key="frame" x="388" y="20" width="392" height="440"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -735,15 +740,20 @@
                                     <action selector="run:" target="XfG-lQ-9wD" id="k0y-db-uDr"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ik-My-ffE">
-                                <rect key="frame" x="20" y="100" width="360" height="360"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSS-G6-QAq">
+                                <rect key="frame" x="108" y="20" width="186" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Sow-3a-ZY6"/>
-                            </imageView>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="l53-x0-qIb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="imageV" destination="7Ik-My-ffE" id="frH-CX-M7O"/>
+                        <outlet property="infoL" destination="BSS-G6-QAq" id="ETO-ek-rh4"/>
                         <outlet property="textV" destination="KdL-KO-UBe" id="ovC-qt-4cZ"/>
                     </connections>
                 </viewController>

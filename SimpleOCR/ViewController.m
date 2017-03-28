@@ -32,11 +32,20 @@
 }
 
 - (IBAction)run:(id)sender {
-    LeptonicaPix *pix = [[LeptonicaPix alloc] initWithNSImage:self.imageV.image];
-    [_tesseract setImage:pix];
-    NSString *ret = [_tesseract getUTF8Text];
-    NSLog(@"%@", ret);
-    [self.textV setString:ret];
+    NSDate *start = [NSDate new];
+    [self.infoL setStringValue:@"Running..."];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        LeptonicaPix *pix = [[LeptonicaPix alloc] initWithNSImage:self.imageV.image];
+        [_tesseract setImage:pix];
+        NSString *ret = [_tesseract getUTF8Text];
+        NSLog(@"%@", ret);
+        NSTimeInterval time = [start timeIntervalSinceNow];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [self.textV setString:ret];
+            [self.infoL setStringValue:[NSString stringWithFormat:@"Time: %.0f s", -time]];
+        });
+    });
+    
 }
 
 - (void)setRepresentedObject:(id)representedObject {
