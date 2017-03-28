@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ViewController : NSViewController
-
-
+@property (unsafe_unretained) IBOutlet NSTextView *textV;
+@property (weak) IBOutlet NSImageView *imageV;
 @end
 
