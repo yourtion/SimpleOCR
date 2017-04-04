@@ -18,6 +18,11 @@
     _tesseract = [[Tesseract alloc] initWithLanguage:@"chi_sim"];
 }
 
+- (void)viewWillDisappear {
+    [_tesseract clear];
+    _tesseract = nil;
+}
+
 - (IBAction)paste:(id)sender {
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
     NSArray *classArray = [NSArray arrayWithObject:[NSImage class]];
@@ -32,6 +37,7 @@
 }
 
 - (IBAction)run:(id)sender {
+    if(!self.imageV.image) return;
     NSDate *start = [NSDate new];
     [self.infoL setStringValue:@"Running..."];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
