@@ -1,0 +1,3 @@
+# SimpleOCR
+
+OCR for mac
